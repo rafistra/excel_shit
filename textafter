@@ -1,0 +1,10 @@
+Function TextAfter(text As String, delimiter As String) As String
+    Dim delimiterPosition As Integer
+    delimiterPosition = InStr(1, text, delimiter)
+
+    If delimiterPosition > 0 Then
+        TextAfter = Mid(text, delimiterPosition + Len(delimiter), Len(text))
+    Else
+        TextAfter = ""
+    End If
+End Function
